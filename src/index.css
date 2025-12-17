@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --bg-main: #f7f6f3;
+  --bg-section: #ffffff;
+  --text-main: #1e1e1e;
+  --text-muted: #6b6b6b;
+  --accent: #2e8b57;
+  --border-soft: #e5e5e5;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: auto;
+}
+
+/* =========================
+   NAVBAR (Nesting CSS)
+========================= */
+
+.navbar {
+  background-color: var(--bg-section);
+  border-bottom: 1px solid var(--border-soft);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  &__logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+
+      &:hover {
+        color: var(--text-main);
+      }
+    }
+  }
+}
+
+/* =========================
+   HEERO (Nesting CSS)
+========================= */
+
+.hero {
+  min-height: calc(100svh - 64px);
+  display: flex;
+  align-items: center;
+  background-color: #eae8e3;
+
+  &__content {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  &__cta {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+}
