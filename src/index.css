@@ -96,7 +96,7 @@ img {
   align-items: center;
   background-color: #eae8e3;
 
-  &__content {
+  & .hero__content {
     text-align: center;
   }
 
@@ -110,12 +110,21 @@ img {
     margin-bottom: 2rem;
   }
 
-  &__cta {
+  & .hero__cta {
     display: inline-block;
     background-color: var(--accent);
     color: white;
     padding: 0.8rem 1.6rem;
     border-radius: 999px;
     font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+     &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
   }
+
 }
+
